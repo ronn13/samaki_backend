@@ -2,9 +2,11 @@ from django.shortcuts import render, HttpResponse
 from rest_framework import viewsets
 from .forms import *
 from .serializers import *
+from django.views.decorators.csrf import csrf_exempt
 
 import traceback
 
+@csrf_exempt
 def pickup(request):
     if request.POST:
         form = PickUpForm(request.POST)
