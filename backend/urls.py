@@ -20,6 +20,7 @@ from farmer.views import *
 
 router = routers.DefaultRouter()
 router.register(r'pickups', PickupViewSet)
+router.register(r'farm', FarmViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

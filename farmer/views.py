@@ -22,3 +22,7 @@ def pickup(request):
 class PickupViewSet(viewsets.ModelViewSet):
     queryset = PickUp.objects.all()
     serializer_class = PickupSerializer
+
+class FarmViewSet(viewsets.ModelViewSet):
+    queryset = Farm.objects.all()
+    serializer_class = FarmSerializer
