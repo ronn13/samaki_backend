@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 import traceback
 
+def index(request):
+    pass
+
 @csrf_exempt
 def pickup(request):
     if request.POST:
@@ -26,3 +29,4 @@ class PickupViewSet(viewsets.ModelViewSet):
 class FarmViewSet(viewsets.ModelViewSet):
     queryset = Farm.objects.all()
     serializer_class = FarmSerializer
+

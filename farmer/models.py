@@ -31,7 +31,7 @@ class PickUp(models.Model):
     status = models.CharField(max_length=50, choices=STATUS, default='PENDING')
 
     def __str__(self):
-        return self.farm
+        return self.farm.farm_name
 
 class Payments(models.Model):
     pass
