@@ -139,6 +139,6 @@ CSRF_USE_SESSIONS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
 #django easymaps configuration for display of farm locations on map
-EASY_MAPS_GOOGLE_KEY = 'AIzaSyBVa1HNAZ1RJGsSc-WgtlUni-8rHqTk9dg'
+EASY_MAPS_GOOGLE_KEY = '123'
 
 EASY_MAPS_CENTER = (-41.3, 32)
