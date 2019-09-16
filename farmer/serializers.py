@@ -4,7 +4,7 @@ from .models import *
 class PickupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PickUp
-        fields = ('farm', 'fish', 'quantity')
+        fields = ('farm', 'fish', 'quantity','status')
 
 class FarmSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
