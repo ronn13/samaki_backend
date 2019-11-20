@@ -25,7 +25,9 @@ router.register(r'farm', FarmViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('farm/', farm, name='farm'),
     path('pickup/', pickup, name='pickup'),
+    path('edit_pickup/<int:pick_id>/', edit_pickup, name='edit_pickup'),
     #django rest framework urls
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))

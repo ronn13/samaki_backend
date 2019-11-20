@@ -9,4 +9,4 @@ class PickupSerializer(serializers.HyperlinkedModelSerializer):
 class FarmSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Farm
-        fields = ('farm_name',)
+        fields = ('id', 'farm_name',)
