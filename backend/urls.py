@@ -28,6 +28,7 @@ urlpatterns = [
     path('farm/', farm, name='farm'),
     path('pickup/', pickup, name='pickup'),
     path('edit_pickup/<int:pick_id>/', edit_pickup, name='edit_pickup'),
+    path('pickups/<int:pk>/', PickUpDetail.as_view()),
     #django rest framework urls
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))

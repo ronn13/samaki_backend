@@ -1,11 +1,17 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
-from rest_framework import viewsets
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from django.http import Http404
+
+from rest_framework import viewsets, status, permissions
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.decorators import permission_classes
+
 from .forms import *
 from .models import *
 from .serializers import *
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib import messages
 
 import traceback
 import logging
@@ -87,4 +93,35 @@ class PickupViewSet(viewsets.ModelViewSet):
 class FarmViewSet(viewsets.ModelViewSet):
     queryset = Farm.objects.all()
     serializer_class = FarmSerializer
+
+@permission_classes((permissions.AllowAny,))
+class PickUpDetail(APIView):
+    """
+    Retrieve, update or delete a PickUp instance.
+    """
+    
+    def get_object(self, pk):
+        try:
+            return PickUp.objects.get(pk=pk)
+        except PickUp.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        pickup = self.get_object(pk)
+        serializer = PickupSerializer(pickup, context={'request': request})
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        context={'request': request}
+        pickup = self.get_object(pk)
+        serializer = PickupSerializer(pickup, data=request.data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        pickup = self.get_object(pk)
+        pickup.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 

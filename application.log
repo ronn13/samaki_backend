@@ -1,0 +1,106 @@
+17:01:32,934 django.request WARNING Not Found: /favicon.ico
+17:01:39,162 django.request WARNING Not Found: /favicon.ico
+17:02:01,861 django.request WARNING Not Found: /favicon.ico
+17:02:05,46 django.request WARNING Not Found: /favicon.ico
+17:02:25,884 django.request ERROR Internal Server Error: /pickups/1/
+Traceback (most recent call last):
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 401, in initial
+    self.check_permissions(request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 334, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\permissions.py", line 233, in has_permission
+    queryset = self._queryset(view)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\permissions.py", line 213, in _queryset
+    ).format(self.__class__.__name__)
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+17:06:18,88 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:07:48,361 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:07:59,578 django.request ERROR Internal Server Error: /pickups/1/
+Traceback (most recent call last):
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend\farmer\views.py", line 111, in get
+    return Response(serializer.data)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 563, in data
+    ret = super(Serializer, self).data
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 530, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\relations.py", line 380, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedRelatedField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+17:09:18,890 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\serializers.py changed, reloading.
+17:12:36,606 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:12:45,448 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:12:58,555 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:13:06,989 django.request ERROR Internal Server Error: /pickups/1/
+Traceback (most recent call last):
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Work\samaki\StoreBackend\backend\farmer\views.py", line 113, in get
+    return Response(serializer.data)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 563, in data
+    ret = super(Serializer, self).data
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\serializers.py", line 530, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Work\samaki\StoreBackend\backend_env\lib\site-packages\rest_framework\relations.py", line 380, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedRelatedField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+17:13:07,585 django.request WARNING Not Found: /favicon.ico
+17:18:21,299 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:18:26,436 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:19:06,935 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:19:17,340 django.utils.autoreload INFO C:\Work\samaki\StoreBackend\backend\farmer\views.py changed, reloading.
+17:20:27,224 MARKDOWN DEBUG Successfuly imported extension module "markdown.extensions.toc".
+17:20:27,226 MARKDOWN DEBUG Successfully loaded extension "markdown.extensions.toc.TocExtension".
+17:20:47,649 MARKDOWN DEBUG Successfuly imported extension module "markdown.extensions.toc".
+17:20:47,649 MARKDOWN DEBUG Successfully loaded extension "markdown.extensions.toc.TocExtension".
+17:21:03,314 MARKDOWN DEBUG Successfuly imported extension module "markdown.extensions.toc".
+17:21:03,314 MARKDOWN DEBUG Successfully loaded extension "markdown.extensions.toc.TocExtension".
